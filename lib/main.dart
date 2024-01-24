@@ -1,4 +1,5 @@
 import 'package:daily_tasks/screens/home.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return const MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Daily Tasks',
       home: Home(),
     );
   }
